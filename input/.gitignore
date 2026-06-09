@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Generated datasets and OCR outputs
+prepared_sem_dataset/
+
+# Trained model artifacts can be large. Upload separately as a GitHub Release,
+# Hugging Face model, or cloud storage artifact if needed.
+sem_resnet_model/
+
+# Local logs/checkpoints
+*.log
+checkpoints/
+runs/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
