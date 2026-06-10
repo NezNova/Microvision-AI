@@ -1,6 +1,6 @@
 # Dataset Characteristics
 
-**[Notebook](exploratory_data_analysis.ipynb)**
+**input/1_DatasetCharacteristics/exploratory_data_analysis.ipynb**
 
 ## Dataset Information
 
