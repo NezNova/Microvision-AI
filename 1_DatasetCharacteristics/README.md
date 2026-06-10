@@ -58,7 +58,7 @@ Metadata was extracted separately but was not used in the current baseline model
 
 ## Exploratory Data Analysis
 
-The exploratory data analysis is conducted in the [exploratory_data_analysis.ipynb](exploratory_data_analysis.ipynb) notebook, which includes:
+The exploratory data analysis is conducted in the [exploratory_data_analysis.ipynb](input/1_DatasetCharacteristics/exploratory_data_analysis.ipynb) notebook, which includes:
 
 - Data loading and initial inspection
 - Statistical summaries and distributions
