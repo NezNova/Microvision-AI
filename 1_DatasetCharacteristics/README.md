@@ -5,19 +5,48 @@
 ## Dataset Information
 
 ### Dataset Source
-- **Dataset Link:** [Provide a direct link to your dataset. If the dataset is private, explain the reason and provide contact information for the dataset owner]
-- **Dataset Owner/Contact:** [If applicable, provide contact information for private datasets]
+- **Dataset Link:** http://hdl.handle.net/11304/7b330bf0-50e5-400a-8bc1-3f6a072f5ffa 
+- **Dataset Owner/Contact:**
+
+  Dataset: NFFA-EUROPE SEM Dataset
+
+  Creators: Rossella Aversa, Mohammad Hadi Modarres, Stefano Cozzini, Regina Ciancio
+
+  Publisher: NFFA-EUROPE Project / EUDAT B2SHARE
+
+  License: CC BY 4.0
+
+  Contact: rossella.aversa@nffa.eu
 
 ### Dataset Characteristics
-- **Number of Observations:** [Total number of samples/records in your dataset. For time series data, also specify the temporal resolution (e.g., daily, hourly, etc.)]
-- **Number of Features:** [Total number of features in your dataset]
+- **Number of Observations:** Approximately 2800 SEM images (2D grayscale microscopy images)
+- **Number of Features:** The trained ResNet model uses cropped SEM images resized to 224 x 224 RGB pixels, corresponding to 150,528 pixel-level input features per image. The dataset has 8 target classes.
+
+Metadata was extracted separately but was not used in the current baseline model.
 
 ### Target Variable/Label
-- **Label Name:** [Name of the target variable/column]
-- **Label Type:** [Classification/Regression/Clustering/Other]
-- **Label Description:** [What does this label represent? What is the prediction task?]
-- **Label Values:** [For classification: list of classes and their meanings. For regression: range of values. For other tasks: describe the label structure]
-- **Label Distribution:** [Brief description of class balance for classification or value distribution for regression]
+- **Label Name:**  8 classes: 3d_edge, Bond-Pad-Array, cantilever, close-up-line, Electrode, label, microfluidic, and waveguide.
+- **Label Type:** Classification
+- **Label Description:** Each label corresponds to a specific MEMS structural feature identified from SEM images. The task is multi-class classification, where the model predicts the MEMS component category shown in the image.
+- **Label Values:**
+
+  3d_edge: SEM images showing three-dimensional edge-like microstructures or elevated patterned boundaries.
+
+  Bond-Pad-Array: Images containing arrays of bond pads used for electrical connection and packaging of MEMS devices.
+
+  cantilever: Images showing cantilever-based MEMS structures such as suspended beams or flexible arms.
+
+  close-up-line: High-magnification images focused on narrow line structures, interconnects, or patterned linear features.
+
+  Electrode: Images containing electrode structures used for electrical actuation, sensing, or signal transmission.
+
+  label: Images primarily containing textual markings, fabrication information, identifiers, or metadata visible in the SEM image.
+
+  microfluidic: Images showing microfluidic channels, chambers, or fluid transport structures in MEMS devices.
+
+  waveguide: Images containing waveguide structures used for optical or signal-guiding applications.
+
+- **Label Distribution:** The original dataset is imbalanced across 8 SEM image classes. The largest classes are Bond-Pad-Array with 825 images, close_up_line with 660 images, and Electrode with 628 images. Smaller classes include waveguide with 129 images, cantilever with 36 images, microfluidic with 18 images, and label with only 2 images. To reduce imbalance during training, minority classes were augmented in the training set.
 
 ### Feature Description
 [Provide a brief description of each feature or group of features in your dataset. If you have many features, group them logically and describe each group. Include information about data types, ranges, and what each feature represents.]
