@@ -10,7 +10,7 @@ MicroVision AI is a machine learning project focused on automated defect detecti
 
 ### Task Type
 
-[Image Classification / Chatbot / Regression / Clustering / Other]
+Image Classification 
 
 ### Results Summary
 
