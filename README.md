@@ -6,7 +6,8 @@
 
 ## Description
 
-MicroVision AI is a machine learning project focused on automated defect detection and segmentation in semiconductor SEM (Scanning Electron Microscopy) images. The project combines classical image analysis techniques with deep learning approaches to identify structural defects in lithography and semiconductor patterns. Inspired by recent hybrid AI methods, the framework explores preprocessing, anomaly detection, and segmentation models for accurate inspection under limited-data conditions. The goal is to develop an interpretable and robust inspection pipeline for advanced semiconductor manufacturing applications.
+This project applies deep learning to automatically classify SEM images of MEMS structures. A dataset of SEM images was organized and labeled into eight different MEMS-related classes, and a pretrained ResNet-50 model was fine-tuned to learn and distinguish their characteristic visual features.
+This classification task represents a first step toward teaching AI to understand and interpret MEMS SEM images. The long-term goal is to extend the approach beyond structure recognition toward automatic defect detection and defect classification, supporting faster and more efficient SEM image analysis and quality assessment.
 
 ### Task Type
 
