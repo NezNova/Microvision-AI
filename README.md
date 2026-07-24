@@ -16,21 +16,21 @@ Image Classification
 ### Results Summary
 
 #### Best Model Performance
-- **Best Model:** [Name and type of the best-performing model"]
-- **Evaluation Metric:** [Primary metric used, e.g., Accuracy, F1-Score, MSE, MAE]
-- **Final Performance:** [Best score achieved, e.g., 95% accuracy, F1-score of 0.87, MSE of 0.12]
+- **Best Model:** Pretrained Microsoft ResNet-50 fine-tuned on cropped SEM images
+- **Evaluation Metric:** Validation accuracy, weighted F1-score, precision, and recall
+- **Final Performance:** 92.97% validation accuracy and 0.927 weighted F1-score
 
 #### Model Comparison
-- **Baseline Performance:** [Baseline model performance for comparison]
-- **Improvement Over Baseline:** [Quantitative improvement, e.g., "+12% accuracy", "25% reduction in MSE"]
-- **Best Alternative Model:** [Second-best model and its performance]
-
+- **Baseline Performance:** ResNet-50 image-only baseline achieved 92.97% validation accuracy
+- **Improvement Over Baseline:** No later experiment improved over the baseline; the unfreeze-from-start experiment matched the baseline at 92.97%
+- **Best Alternative Model:** Image + metadata model achieved 92.43% validation accuracy and 0.920 weighted F1-score
+- 
 #### Key Insights
-- **Most Important Features:** [Top 3-5 features that drive model performance]
-- **Model Strengths:** [What the model does well]
-- **Model Limitations:** [Known limitations and failure cases]
-- **Business Impact:** [Practical implications of the model performance]
-
+- **Most Important Features:** Cropped SEM image pixels from the gray microscopy region
+- **Model Strengths:** Strong classification performance on majority classes such as Bond-Pad-Array, 3d_edge, Electrode, close_up_line, and waveguide
+- **Model Limitations:** Minority classes such as label and microfluidic had very few real examples, and OCR-extracted metadata was noisy and did not improve final accuracy
+- **Business Impact:** This project is a first step toward automating MEMS SEM image analysis. The model can reduce manual sorting effort by classifying SEM images into structural categories. In the future, this pipeline could be extended so AI can recognize MEMS structures, detect defects, and classify different defect types in SEM images.
+  
 ## Documentation
 
 1. **[Literature Review](0_LiteratureReview/README.md)**
